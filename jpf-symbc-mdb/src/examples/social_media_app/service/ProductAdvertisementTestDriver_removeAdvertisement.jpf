@@ -1,0 +1,30 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_removeAdvertisement(con#sym)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_removeAdvertisement.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.457767163
+Duration of execution: 0.441511884
+Duration of execution: 0.440662355
+Duration of execution: 0.471335917
+Duration of execution: 0.443585646
+Duration of execution: 0.444593406
+Duration of execution: 0.453352203
+Duration of execution: 0.444126243
+Duration of execution: 0.451793312
+Duration of execution: 0.444124952
+#-> 0.4492853081
+
+# Tests min: 3
+# Tests max: 29

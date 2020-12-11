@@ -1,0 +1,31 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_updateProduct(con#con#con#sym) 
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+symbolic.mdb.initHeuristic=true
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_updateProduct.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 1.195882802
+Duration of execution: 1.278398278
+Duration of execution: 1.269596885
+Duration of execution: 1.243832417
+Duration of execution: 1.277858003
+Duration of execution: 1.306153371
+Duration of execution: 1.273023937
+Duration of execution: 1.272796358
+Duration of execution: 1.311227491
+Duration of execution: 1.289048848
+#-> 1.271781839
+
+# Tests min: 2
+# Tests max: 181

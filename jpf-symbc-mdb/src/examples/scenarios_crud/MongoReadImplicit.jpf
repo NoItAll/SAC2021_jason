@@ -1,0 +1,10 @@
+target = scenarios_crud.MongoReadImplicit
+symbolic.method = scenarios_crud.MongoReadImplicit.printMDocumentsUsingLTEFilters(con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadImplicit.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests

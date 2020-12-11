@@ -1,0 +1,11 @@
+[
+	{"id" : "int", 
+	 "userId" : "int", 
+	 "adId" : "int", 
+	 "product" : 
+	 	{"productName": "String", 
+		 "ownerBusiness": {"businessName" : "String", "address" : {"addressStreet" : "String", "addressCity" : "String"}}, 
+		 "price": "int",
+		 "category": "int"}, 
+	 "wasFavoriteCategory" : "boolean"}
+]

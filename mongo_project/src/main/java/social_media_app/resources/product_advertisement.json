@@ -1,0 +1,12 @@
+[	
+	{"product": 
+		{"productName": "String", 
+		 "ownerBusiness": {"businessName" : "String", "address" : {"addressStreet" : "String", "addressCity" : "String"}}, 
+		 "price": "int"}, 
+	 "advertisementMetadata": {"advertisementText" : "String"}},
+	 {"product": 
+		{"productName": "String", 
+		 "ownerBusiness": {"businessName" : "String", "address" : {"addressStreet" : "String", "addressCity" : "String"}}, 
+		 "price": "int"}, 
+	 "advertisementMetadata": {"associatedInfluencerName" : "String", "advertisementPostText" : "String"}}
+]

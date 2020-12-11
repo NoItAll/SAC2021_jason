@@ -1,0 +1,23 @@
+target = scenarios_crud.MongoCreateReadDelete
+symbolic.method = scenarios_crud.MongoCreateReadDelete.insertOrdersThenDelete(con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoCreateReadDelete.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 2.247073003
+Duration of execution: 2.310040102
+Duration of execution: 2.242298269
+Duration of execution: 2.218523714
+Duration of execution: 2.27662748
+Duration of execution: 2.288138169
+Duration of execution: 2.28765897
+Duration of execution: 2.323347636
+Duration of execution: 2.263902808
+Duration of execution: 2.279288684
+#-> 2.2736898835

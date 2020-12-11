@@ -1,0 +1,2 @@
+[{"customer": {"income": "double"}, "product": {"name": "String", "price": "int"}},
+{"customer": {"income": "double", "status": "int", "enlistedBy": {"status": "int", "enlistedBy": {"status": "integer"}}}, "product": {"price": "int"}}]

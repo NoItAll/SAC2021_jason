@@ -1,0 +1,23 @@
+[
+	{"id": "int",
+	 "profileInfos" : 
+		{"profileFirstName" : "String",
+		 "profileLastName" : "String",
+		 "description" : "String"},
+	 "address" : 
+	 	{"addressStreet" : "String",
+	 	 "addressCity" : "String"},
+	 "userName" : "String",
+	 "interestedInCategory" : "int"},
+	{"id": "int",
+	 "profileInfos": 
+	  	{"profileFirstName" : "String",
+		 "profileLastName" : "String",
+		 "representedBusinessName" : "String", 
+		 "representedBusinessPosition": "String"},
+	 "address" :
+	  	{"addressStreet" : "String",
+		 "addressCity" : "String"},
+	 "userName" : "String",
+	 "interestedInCategory" : "int"}
+]

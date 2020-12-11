@@ -1,0 +1,16 @@
+[	
+	{"id": "int",
+	 "product": 
+		{"productName": "String", 
+		 "ownerBusiness": {"businessName" : "String", "address" : {"addressStreet" : "String", "addressCity" : "String"}}, 
+		 "price": "int",
+		 "category": "int"}, 
+	 "advertisementMetadata": {"advertisementText" : "String"}},
+	 {"id": "int",
+	  "product": 
+		{"productName": "String", 
+		 "ownerBusiness": {"businessName" : "String", "address" : {"addressStreet" : "String", "addressCity" : "String"}}, 
+		 "price": "int",
+		 "category": "int"}, 
+	 "advertisementMetadata": {"associatedInfluencerName" : "String", "advertisementPostText" : "String"}}
+]

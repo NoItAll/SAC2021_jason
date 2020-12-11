@@ -1,0 +1,32 @@
+target = social_media_app.service.AdvertisementRecommendationService
+symbolic.method = social_media_app.service.AdvertisementRecommendationService.driver_recordClick(con#con#con#con#con#con)
+
+search.multiple_errors=true
+symbolic.strings=true
+# Dummy solver for strings:
+symbolic.string_dp=deq
+search.depth_limit=50
+symbolic.mdb.initHeuristic=true
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestAdvertisementRecommendationService_recordClick.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 1.396612057
+Duration of execution: 1.42019913
+Duration of execution: 1.40567327
+Duration of execution: 1.450842653
+Duration of execution: 1.398102915
+Duration of execution: 1.440795103
+Duration of execution: 1.411588661
+Duration of execution: 1.401953668
+Duration of execution: 1.487223033
+Duration of execution: 1.389788405
+#-> 1.4202778895
+
+# Tests min: 6
+# Tests max: 121

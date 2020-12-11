@@ -1,0 +1,26 @@
+target = scenarios_crud.MongoCreateReadUpdate_1
+symbolic.method = scenarios_crud.MongoCreateReadUpdate_1.updateOrders(con)
+
+symbolic.min_int=-9001
+symbolic.max_int=9001
+symbolic.dp=z3
+
+search.multiple_errors=false
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoCreateReadUpdate_1.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 0.851734805
+Duration of execution: 0.818363896
+Duration of execution: 0.795681565
+Duration of execution: 0.869173894
+Duration of execution: 0.807531728
+Duration of execution: 0.84946002
+Duration of execution: 0.835932699
+Duration of execution: 0.835792576
+Duration of execution: 0.838632793
+Duration of execution: 0.814338143
+#-> 0.8316642119

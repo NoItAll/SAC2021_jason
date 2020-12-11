@@ -1,0 +1,30 @@
+target = social_media_app.service.UserService
+symbolic.method = social_media_app.service.UserService.driver_updateUser(con#con)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestUserService_updateUser.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.748498942
+Duration of execution: 0.710566394
+Duration of execution: 0.715278713
+Duration of execution: 0.69274211
+Duration of execution: 0.733314421
+Duration of execution: 0.692523226
+Duration of execution: 0.698569213
+Duration of execution: 0.745492829
+Duration of execution: 0.691450593
+Duration of execution: 0.689725715
+#-> 0.7118162156
+
+# Tests min: 3
+# Tests max: 57

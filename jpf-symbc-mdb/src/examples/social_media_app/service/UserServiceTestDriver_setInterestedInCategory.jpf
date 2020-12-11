@@ -1,0 +1,30 @@
+target = social_media_app.service.UserService
+symbolic.method = social_media_app.service.UserService.driver_setInterestedInCategory(con#sym#sym)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestUserService_setInterestedInCategory.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.792118189
+Duration of execution: 0.795117805
+Duration of execution: 0.806432795
+Duration of execution: 0.794215806
+Duration of execution: 0.794287873
+Duration of execution: 0.794901727
+Duration of execution: 0.81760044
+Duration of execution: 0.82557428
+Duration of execution: 0.820790735
+Duration of execution: 0.797269997
+#-> 0.8038309647
+
+# Tests min: 4
+# Tests max: 63

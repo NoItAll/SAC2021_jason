@@ -1,0 +1,23 @@
+target = scenarios_crud.MongoReadComplex_2
+symbolic.method = scenarios_crud.MongoReadComplex_2.readOrders(con)
+
+# We expect some NullPointerExceptions for status.
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadComplex_2.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 0.376190241
+Duration of execution: 0.380584803
+Duration of execution: 0.363446175
+Duration of execution: 0.360344514
+Duration of execution: 0.368178579
+Duration of execution: 0.364294718
+Duration of execution: 0.382243964
+Duration of execution: 0.388575614
+Duration of execution: 0.395132181
+Duration of execution: 0.388658445
+#-> 0.3767649234

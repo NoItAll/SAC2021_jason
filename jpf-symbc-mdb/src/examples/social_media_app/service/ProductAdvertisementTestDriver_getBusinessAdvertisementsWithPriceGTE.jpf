@@ -1,0 +1,30 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_getBusinessAdvertisementsWithPriceGTE(con#con#sym)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_getBusinessAdvertisementsWithPriceGTE.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 2.693751684
+Duration of execution: 2.671805895
+Duration of execution: 2.733728671
+Duration of execution: 2.658070355
+Duration of execution: 2.699337276
+Duration of execution: 2.649405791
+Duration of execution: 2.679007568
+Duration of execution: 2.650207579
+Duration of execution: 2.658337136
+Duration of execution: 2.690779897
+#-> 2.6784431852
+
+# Tests min: 2
+# Tests max: 585

@@ -1,0 +1,33 @@
+target = social_media_app.service.AdvertisementRecommendationService
+symbolic.method = social_media_app.service.AdvertisementRecommendationService.driver_decideShowAdvertisement(con#con#con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.strings=true
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestAdvertisementRecommendationService_decideShowAdvertisement.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 1.929119118
+Duration of execution: 1.817144903
+Duration of execution: 1.870284882
+Duration of execution: 1.806666984
+Duration of execution: 1.873843082
+Duration of execution: 1.840927868
+Duration of execution: 1.84426601
+Duration of execution: 1.81907253
+Duration of execution: 1.803396155
+Duration of execution: 1.816480836
+#-> 1.8421202368
+
+# Sum of averages of AdvertisementRecommendationService: 3.7326418322
+
+# Tests min: 3
+# Tests max: 235

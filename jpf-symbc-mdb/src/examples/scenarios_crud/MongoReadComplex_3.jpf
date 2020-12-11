@@ -1,0 +1,24 @@
+target = scenarios_crud.MongoReadComplex_3
+symbolic.method = scenarios_crud.MongoReadComplex_3.readOrdersWithEQFilter(con)
+
+search.multiple_errors=false
+search.depth_limit=50
+
+# We use a different schema here than for the other scenarios to check multiple nesting layers (enlistedBy)
+symbolic.mdb.schema=src/examples/resources/alternatives
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadComplex_3.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 0.760369081
+Duration of execution: 0.767234487
+Duration of execution: 0.763792243
+Duration of execution: 0.76044537
+Duration of execution: 0.738540159
+Duration of execution: 0.777710007
+Duration of execution: 0.754230924
+Duration of execution: 0.788527528
+Duration of execution: 0.770860119
+Duration of execution: 0.75893341
+#-> 0.7640643328

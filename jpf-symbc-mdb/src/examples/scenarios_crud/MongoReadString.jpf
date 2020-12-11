@@ -1,0 +1,13 @@
+target = scenarios_crud.MongoReadString
+symbolic.method = scenarios_crud.MongoReadString.searchCustomerWithId(con#con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.strings=true
+symbolic.string_dp=deq
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadString.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests

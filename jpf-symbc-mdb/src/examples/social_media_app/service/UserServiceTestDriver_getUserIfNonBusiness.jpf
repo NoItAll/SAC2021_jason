@@ -1,0 +1,30 @@
+target = social_media_app.service.UserService
+symbolic.method = social_media_app.service.UserService.driver_getUserIfNonBusiness(con#sym)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestUserService_getUserIfNonBusiness.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.551092132
+Duration of execution: 0.570692692
+Duration of execution: 0.555282031
+Duration of execution: 0.586774566
+Duration of execution: 0.552775784
+Duration of execution: 0.578441368
+Duration of execution: 0.551815526
+Duration of execution: 0.568977435
+Duration of execution: 0.548330373
+Duration of execution: 0.514923822
+#-> 0.5579105729
+
+# Tests min: 2
+# Tests max: 39

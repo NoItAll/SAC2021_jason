@@ -1,0 +1,22 @@
+target = scenarios_crud.MongoCreateRead_1
+symbolic.method = scenarios_crud.MongoCreateRead_1.insertAndReadDoc(con#sym)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoCreateRead_1.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 0.454923941
+Duration of execution: 0.45979633
+Duration of execution: 0.483484046
+Duration of execution: 0.487235635
+Duration of execution: 0.478376253
+Duration of execution: 0.497445
+Duration of execution: 0.466847211
+Duration of execution: 0.505537788
+Duration of execution: 0.497008851
+Duration of execution: 0.474671123
+#-> 0.4805326178

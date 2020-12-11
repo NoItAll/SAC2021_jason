@@ -1,0 +1,270 @@
+package jpf.symbc.mdb.social_media_integration_tests;
+
+import com.mongodb.MongoClient;
+import com.mongodb.MongoClientOptions;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import org.bson.Document;
+import org.bson.codecs.configuration.CodecRegistries;
+import org.bson.codecs.configuration.CodecRegistry;
+import org.bson.codecs.pojo.PojoCodecProvider;
+import org.bson.types.ObjectId;
+import org.junit.*;
+import social_media_app.entity.Address;
+import social_media_app.entity.Business;
+import social_media_app.entity.Product;
+import social_media_app.entity.ProductAdvertisement;
+import social_media_app.entity.User;
+import social_media_app.service.AdvertisementRecommendationService;
+import social_media_app.service.UserService;
+import static com.mongodb.client.model.Filters.eq;
+import static org.junit.Assert.*;
+
+@SuppressWarnings("all")
+public class IntegrationTestAdvertisementRecommendationService_decideShowAdvertisement {
+	protected static MongoDatabase mongoDatabase;
+	@BeforeClass
+	public static void setUpClass() {
+		CodecRegistry pojoCodecRegistry = CodecRegistries.fromRegistries(MongoClient.getDefaultCodecRegistry(),
+			CodecRegistries.fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+		MongoClient mongoClient = new MongoClient("localhost", MongoClientOptions.builder().codecRegistry(pojoCodecRegistry).build());
+		mongoDatabase = mongoClient.getDatabase("devel");
+		mongoDatabase.drop();
+	}
+	@After
+	public void tearDown() {
+		mongoDatabase.drop();
+	}
+	@Test public void test_decideShowAdvertisement_0_0() {
+		MongoCollection arg0 = mongoDatabase.getCollection("product_advertisement",ProductAdvertisement.class);
+		MongoCollection arg1 = mongoDatabase.getCollection("user",User.class);
+		int arg2 = (int) 0;
+		AdvertisementRecommendationService arg3 = new AdvertisementRecommendationService();
+		arg3.setAdvertisementClickCollection(null);
+		UserService arg4 = new UserService();
+		arg4.setUserCollection(arg1);
+		arg3.setUserService(arg4);
+		arg3.setProductAdvertisementCollection(arg0);
+		// Generate assertEquals for method call
+		assertEquals(null,arg3.decideShowAdvertisement(arg2));
+		// Generate assertion statements to check content of 'user':
+		MongoCollection<Document> arg5 = mongoDatabase.getCollection("user", Document.class);
+		assertEquals(0,arg5.countDocuments());
+	}
+	@Test public void test_decideShowAdvertisement_0_203() {
+		MongoCollection arg0 = mongoDatabase.getCollection("product_advertisement",ProductAdvertisement.class);
+		MongoCollection arg1 = mongoDatabase.getCollection("user",User.class);
+		Document arg2 = new Document();
+		arg2.put("addressCity", "DummyString#366");
+		arg2.put("addressStreet", "DummyString#367");
+		Document arg3 = new Document();
+		arg3.put("profileFirstName", "DummyString#368");
+		arg3.put("profileLastName", "DummyString#369");
+		arg3.put("representedBusinessName", "DummyString#370");
+		arg3.put("representedBusinessPosition", "DummyString#371");
+		Document arg4 = new Document();
+		arg4.put("_id", -2);
+		arg4.put("address", arg2);
+		arg4.put("interestedInCategory", 0);
+		arg4.put("profileInfos", arg3);
+		arg4.put("userName", "DummyString#372");
+		arg1.insertOne(arg4);
+		Document arg5 = new Document();
+		arg5.put("addressCity", "DummyString#585");
+		arg5.put("addressStreet", "DummyString#586");
+		Document arg6 = new Document();
+		arg6.put("profileFirstName", "DummyString#587");
+		arg6.put("profileLastName", "DummyString#588");
+		arg6.put("representedBusinessName", "DummyString#589");
+		arg6.put("representedBusinessPosition", "DummyString#590");
+		Document arg7 = new Document();
+		arg7.put("_id", -1);
+		arg7.put("address", arg5);
+		arg7.put("interestedInCategory", 0);
+		arg7.put("profileInfos", arg6);
+		arg7.put("userName", "DummyString#591");
+		arg1.insertOne(arg7);
+		Document arg8 = new Document();
+		arg8.put("addressCity", "DummyString#605");
+		arg8.put("addressStreet", "DummyString#606");
+		Document arg9 = new Document();
+		arg9.put("description", "DummyString#607");
+		arg9.put("profileFirstName", "DummyString#608");
+		arg9.put("profileLastName", "DummyString#609");
+		Document arg10 = new Document();
+		arg10.put("_id", 0);
+		arg10.put("address", arg8);
+		arg10.put("interestedInCategory", 0);
+		arg10.put("profileInfos", arg9);
+		arg10.put("userName", "DummyString#610");
+		arg1.insertOne(arg10);
+		int arg11 = (int) 0;
+		AdvertisementRecommendationService arg12 = new AdvertisementRecommendationService();
+		arg12.setAdvertisementClickCollection(null);
+		UserService arg13 = new UserService();
+		arg13.setUserCollection(arg1);
+		arg12.setUserService(arg13);
+		arg12.setProductAdvertisementCollection(arg0);
+		// Generate assertEquals for method call
+		assertEquals(null,arg12.decideShowAdvertisement(arg11));
+		// Generate assertion statements to check content of 'product_advertisement':
+		MongoCollection<Document> arg14 = mongoDatabase.getCollection("product_advertisement", Document.class);
+		assertEquals(0,arg14.countDocuments());
+		// Generate assertion statements to check content of 'user':
+		MongoCollection<Document> arg15 = mongoDatabase.getCollection("user", Document.class);
+		assertEquals(arg4, arg15.find(eq(arg4.get("_id"))).first());
+		assertEquals(arg7, arg15.find(eq(arg7.get("_id"))).first());
+		assertEquals(arg10, arg15.find(eq(arg10.get("_id"))).first());
+		assertEquals(3,arg15.countDocuments());
+	}
+	@Test public void test_decideShowAdvertisement_0_230() {
+		MongoCollection arg0 = mongoDatabase.getCollection("product_advertisement",ProductAdvertisement.class);
+		Document arg1 = new Document();
+		arg1.put("advertisementPostText", "DummyString#649");
+		arg1.put("associatedInfluencerName", "DummyString#650");
+		Document arg2 = new Document();
+		arg2.put("addressCity", "DummyString#651");
+		arg2.put("addressStreet", "DummyString#652");
+		Document arg3 = new Document();
+		arg3.put("address", arg2);
+		arg3.put("businessName", "DummyString#653");
+		Document arg4 = new Document();
+		arg4.put("category", 1);
+		arg4.put("ownerBusiness", arg3);
+		arg4.put("price", 0);
+		arg4.put("productName", "DummyString#654");
+		Document arg5 = new Document();
+		arg5.put("_id", 0);
+		arg5.put("advertisementMetadata", arg1);
+		arg5.put("product", arg4);
+		arg0.insertOne(arg5);
+		Document arg6 = new Document();
+		arg6.put("advertisementPostText", "DummyString#671");
+		arg6.put("associatedInfluencerName", "DummyString#672");
+		Document arg7 = new Document();
+		arg7.put("addressCity", "DummyString#673");
+		arg7.put("addressStreet", "DummyString#674");
+		Document arg8 = new Document();
+		arg8.put("address", arg7);
+		arg8.put("businessName", "DummyString#675");
+		Document arg9 = new Document();
+		arg9.put("category", -1);
+		arg9.put("ownerBusiness", arg8);
+		arg9.put("price", 0);
+		arg9.put("productName", "DummyString#676");
+		Document arg10 = new Document();
+		arg10.put("_id", 1);
+		arg10.put("advertisementMetadata", arg6);
+		arg10.put("product", arg9);
+		arg0.insertOne(arg10);
+		Document arg11 = new Document();
+		arg11.put("advertisementPostText", "DummyString#682");
+		arg11.put("associatedInfluencerName", "DummyString#683");
+		Document arg12 = new Document();
+		arg12.put("addressCity", "DummyString#684");
+		arg12.put("addressStreet", "DummyString#685");
+		Document arg13 = new Document();
+		arg13.put("address", arg12);
+		arg13.put("businessName", "DummyString#686");
+		Document arg14 = new Document();
+		arg14.put("category", 0);
+		arg14.put("ownerBusiness", arg13);
+		arg14.put("price", 0);
+		arg14.put("productName", "DummyString#687");
+		Document arg15 = new Document();
+		arg15.put("_id", 2);
+		arg15.put("advertisementMetadata", arg11);
+		arg15.put("product", arg14);
+		arg0.insertOne(arg15);
+		MongoCollection arg16 = mongoDatabase.getCollection("user",User.class);
+		Document arg17 = new Document();
+		arg17.put("addressCity", "DummyString#366");
+		arg17.put("addressStreet", "DummyString#367");
+		Document arg18 = new Document();
+		arg18.put("profileFirstName", "DummyString#368");
+		arg18.put("profileLastName", "DummyString#369");
+		arg18.put("representedBusinessName", "DummyString#370");
+		arg18.put("representedBusinessPosition", "DummyString#371");
+		Document arg19 = new Document();
+		arg19.put("_id", -2);
+		arg19.put("address", arg17);
+		arg19.put("interestedInCategory", 0);
+		arg19.put("profileInfos", arg18);
+		arg19.put("userName", "DummyString#372");
+		arg16.insertOne(arg19);
+		Document arg20 = new Document();
+		arg20.put("addressCity", "DummyString#585");
+		arg20.put("addressStreet", "DummyString#586");
+		Document arg21 = new Document();
+		arg21.put("profileFirstName", "DummyString#587");
+		arg21.put("profileLastName", "DummyString#588");
+		arg21.put("representedBusinessName", "DummyString#589");
+		arg21.put("representedBusinessPosition", "DummyString#590");
+		Document arg22 = new Document();
+		arg22.put("_id", -1);
+		arg22.put("address", arg20);
+		arg22.put("interestedInCategory", 0);
+		arg22.put("profileInfos", arg21);
+		arg22.put("userName", "DummyString#591");
+		arg16.insertOne(arg22);
+		Document arg23 = new Document();
+		arg23.put("addressCity", "DummyString#605");
+		arg23.put("addressStreet", "DummyString#606");
+		Document arg24 = new Document();
+		arg24.put("description", "DummyString#607");
+		arg24.put("profileFirstName", "DummyString#608");
+		arg24.put("profileLastName", "DummyString#609");
+		Document arg25 = new Document();
+		arg25.put("_id", 0);
+		arg25.put("address", arg23);
+		arg25.put("interestedInCategory", 0);
+		arg25.put("profileInfos", arg24);
+		arg25.put("userName", "DummyString#610");
+		arg16.insertOne(arg25);
+		int arg26 = (int) 0;
+		AdvertisementRecommendationService arg27 = new AdvertisementRecommendationService();
+		arg27.setAdvertisementClickCollection(null);
+		UserService arg28 = new UserService();
+		arg28.setUserCollection(arg16);
+		arg27.setUserService(arg28);
+		arg27.setProductAdvertisementCollection(arg0);
+		// Generate assertEquals for method call
+		ProductAdvertisement arg29 = new ProductAdvertisement();
+		arg29.setId((int) 2);
+		Product arg31 = new Product();
+		arg31.setProductName("DummyString#687");
+		Business arg33 = new Business();
+		arg33.setBusinessName("DummyString#686");
+		Address arg35 = new Address();
+		arg35.setAddressStreet("DummyString#685");
+		arg35.setAddressCity("DummyString#684");
+		arg33.setAddress(arg35);
+		arg31.setOwnerBusiness(arg33);
+		arg31.setPrice((int) 0);
+		arg31.setCategory((int) 0);
+		arg29.setProduct(arg31);
+		LinkedHashMap arg40 = new LinkedHashMap();
+		String arg41 = "advertisementPostText";
+		String arg42 = "DummyString#682";
+		arg40.put(arg41,arg42);
+		String arg43 = "associatedInfluencerName";
+		String arg44 = "DummyString#683";
+		arg40.put(arg43,arg44);
+		arg29.setAdvertisementMetadata(arg40);
+		assertEquals(arg29,arg27.decideShowAdvertisement(arg26));
+		// Generate assertion statements to check content of 'product_advertisement':
+		MongoCollection<Document> arg45 = mongoDatabase.getCollection("product_advertisement", Document.class);
+		assertEquals(arg5, arg45.find(eq(arg5.get("_id"))).first());
+		assertEquals(arg10, arg45.find(eq(arg10.get("_id"))).first());
+		assertEquals(arg15, arg45.find(eq(arg15.get("_id"))).first());
+		assertEquals(3,arg45.countDocuments());
+		// Generate assertion statements to check content of 'user':
+		MongoCollection<Document> arg46 = mongoDatabase.getCollection("user", Document.class);
+		assertEquals(arg19, arg46.find(eq(arg19.get("_id"))).first());
+		assertEquals(arg22, arg46.find(eq(arg22.get("_id"))).first());
+		assertEquals(arg25, arg46.find(eq(arg25.get("_id"))).first());
+		assertEquals(3,arg46.countDocuments());
+	}
+}

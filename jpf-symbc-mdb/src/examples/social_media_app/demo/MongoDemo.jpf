@@ -1,0 +1,12 @@
+target = social_media_app.demo.MongoDemo
+symbolic.method = social_media_app.demo.MongoDemo.demo(con#sym)
+
+search.multiple_errors=true
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+
+symbolic.mdb.reduce_coverage_losless=true
+
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoDemo_demo.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests

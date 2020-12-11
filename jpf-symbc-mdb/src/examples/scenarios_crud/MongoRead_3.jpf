@@ -1,0 +1,10 @@
+target = scenarios_crud.MongoRead_3
+symbolic.method = scenarios_crud.MongoRead_3.readCustomersUsingNeFilters(con)
+
+search.multiple_errors=false
+
+symbolic.mdb.reduce_coverage_losless=true
+
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoRead_3.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests

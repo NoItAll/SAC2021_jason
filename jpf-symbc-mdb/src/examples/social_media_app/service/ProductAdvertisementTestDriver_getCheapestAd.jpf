@@ -1,0 +1,31 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_getCheapestAd(con#con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.strings=true
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_getCheapestAd.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 1.062040104
+Duration of execution: 1.100372815
+Duration of execution: 1.079864614
+Duration of execution: 1.077277715
+Duration of execution: 1.160668746
+Duration of execution: 1.114583806
+Duration of execution: 1.132690587
+Duration of execution: 1.070364644
+Duration of execution: 1.147709751
+Duration of execution: 1.11212842
+#-> 1.1057701202
+
+# Tests min: 3
+# Tests max: 137

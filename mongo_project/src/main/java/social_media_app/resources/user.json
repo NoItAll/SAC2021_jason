@@ -1,0 +1,27 @@
+[
+	{"profileInformation" : 
+		{"profileInfos": 
+			{"profileFirstName" : "String",
+			 "profileLastName" : "String",
+			 "description" : "String",
+			 "age" : "int"},
+		 "isPrivate" : "boolean",
+		 "address" : 
+		 	{"addressStreet" : "String",
+		 	 "addressCity" : "String"}},
+	 "isPremiumMember" : "boolean",
+	 "userName" : "String"},
+	 {"profileInformation" : 
+		{"profileInfos": 
+			{"profileFirstName" : "String",
+			 "profileLastName" : "String",
+			 "representedBusiness" : {"businessName": "String", "address" : 
+			 	{"addressStreet" : "String", 
+			 	 "addressCity" : "String"}}},
+		 "isPrivate" : "boolean",
+		 "address" : 
+		 	{"addressStreet" : "String",
+		 	 "addressCity" : "String"}},
+	 "isPremiumMember" : "boolean",
+	 "userName" : "String"}
+]

@@ -1,0 +1,22 @@
+target = scenarios_crud.MongoReadComplex_4
+symbolic.method = scenarios_crud.MongoReadComplex_4.readOrdersWithLTAndGTFilter(con)
+
+search.multiple_errors=false
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadComplex_4.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 2.893405269
+Duration of execution: 2.847845835
+Duration of execution: 2.863514124
+Duration of execution: 2.864932659
+Duration of execution: 2.923330645
+Duration of execution: 2.826196277
+Duration of execution: 2.889653985
+Duration of execution: 2.867027288
+Duration of execution: 2.97475271
+Duration of execution: 2.897388794
+#-> 2.8848047586

@@ -1,0 +1,31 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_getBusinessAdvertisements(con#con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.strings=true
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_getBusinessAdvertisements.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.922477923
+Duration of execution: 0.949622752
+Duration of execution: 0.919958771
+Duration of execution: 0.908640516
+Duration of execution: 0.937340103
+Duration of execution: 0.899427956
+Duration of execution: 0.942436938
+Duration of execution: 0.952745524
+Duration of execution: 0.918989545
+Duration of execution: 0.87784918
+#-> 0.9229489208
+
+# Tests min: 2
+# Tests max: 85

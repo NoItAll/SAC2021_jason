@@ -1,0 +1,32 @@
+target = social_media_app.service.UserService
+symbolic.method = social_media_app.service.UserService.driver_getUser(con#sym)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestUserService_getUser.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.558821367
+Duration of execution: 0.55190334
+Duration of execution: 0.580159953
+Duration of execution: 0.548657871
+Duration of execution: 0.548484774
+Duration of execution: 0.528240825
+Duration of execution: 0.534552195
+Duration of execution: 0.540606637
+Duration of execution: 0.532900736
+Duration of execution: 0.556388995
+#-> 0.5480716693
+
+# Sum of averages of UserService: 3.1384894766
+
+# Tests min: 3
+# Tests max: 29

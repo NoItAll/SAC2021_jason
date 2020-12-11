@@ -1,0 +1,33 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_changeInfluencerMetadataText(con#con#con#con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.strings=true
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_changeInfluencerMetadataText.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 1.487982829
+Duration of execution: 1.517237158
+Duration of execution: 1.542315256
+Duration of execution: 1.493655328
+Duration of execution: 1.564418376
+Duration of execution: 1.528873097
+Duration of execution: 1.507197492
+Duration of execution: 1.503152993
+Duration of execution: 1.609234002
+Duration of execution: 1.500145644
+#-> 1.5254212175
+
+# Sum of averages of ProductAdvertisementService: 11.2206287653
+
+# Tests min: 2
+# Tests max: 259

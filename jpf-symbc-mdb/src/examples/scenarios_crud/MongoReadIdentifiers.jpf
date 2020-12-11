@@ -1,0 +1,12 @@
+target = scenarios_crud.MongoReadIdentifiers
+symbolic.method = scenarios_crud.MongoReadIdentifiers.tryToReadManyDocsWithOneId(con)
+
+search.multiple_errors=false
+search.depth_limit=50
+
+symbolic.mdb.initHeuristic=false
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoReadIdentifiers.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests

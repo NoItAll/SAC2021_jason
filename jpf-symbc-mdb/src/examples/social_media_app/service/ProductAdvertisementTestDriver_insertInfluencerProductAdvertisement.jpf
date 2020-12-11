@@ -1,0 +1,30 @@
+target = social_media_app.service.ProductAdvertisementService
+symbolic.method = social_media_app.service.ProductAdvertisementService.driver_insertInfluencerProductAdvertisement(con#sym#con#con#con#con#sym#sym#con#con)
+
+search.multiple_errors=true
+symbolic.strings=true
+search.depth_limit=50
+symbolic.string_dp=deq
+
+symbolic.mdb.schema=src/examples/social_media_app/resources/
+symbolic.mdb.circumvent_driver_call=true
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/social_media_integration_tests/IntegrationTestProductAdvertisementService_insertInfluencerProductAdvertisement.java
+symbolic.mdb.test_package=jpf.symbc.mdb.social_media_integration_tests
+
+Duration of execution: 0.572852254
+Duration of execution: 0.587509908
+Duration of execution: 0.589613716
+Duration of execution: 0.570979602
+Duration of execution: 0.550502724
+Duration of execution: 0.551720463
+Duration of execution: 0.553810514
+Duration of execution: 0.551774479
+Duration of execution: 0.601627548
+Duration of execution: 0.583480997
+#-> 0.5713872205
+
+# Tests min: 2
+# Tests max: 29

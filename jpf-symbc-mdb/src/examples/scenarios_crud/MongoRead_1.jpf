@@ -1,0 +1,22 @@
+target = scenarios_crud.MongoRead_1
+symbolic.method = scenarios_crud.MongoRead_1.readCustomersUsingOrFilters(con)
+
+search.multiple_errors=true
+search.depth_limit=50
+
+symbolic.mdb.reduce_coverage_losless=true
+
+symbolic.mdb.test_path=${jpf-symbc-mdb}/src/test/java/jpf/symbc/mdb/generated_integration_tests/IntegrationTestMongoRead_1.java
+symbolic.mdb.test_package=jpf.symbc.mdb.generated_integration_tests
+
+Duration of execution: 0.736304474
+Duration of execution: 0.7631214
+Duration of execution: 0.736926489
+Duration of execution: 0.722306949
+Duration of execution: 0.729904989
+Duration of execution: 0.660026667
+Duration of execution: 0.731213818
+Duration of execution: 0.663367758
+Duration of execution: 0.707549271
+Duration of execution: 0.720574937
+#-> 0.7171296752
